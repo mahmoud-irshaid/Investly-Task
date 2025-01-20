@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.active-tab {
+  border-right: 4px solid $primary-color;
+}
+
+.avatar-border {
+  border: 2px solid $blue-color-scale-100;
+}

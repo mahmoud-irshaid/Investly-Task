@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+// Define a color map
+$colors: (
+  'primary': $primary-color,
+  'secndary': $secondary-color,
+  'highlight': $highlight-text-color,
+  'subtle': $sub-text-color,
+  'main': $main-text-color,
+  'neutral': $neutral-text-color,
+  'grey': $gray-text-color,
+  'gray': $gray-color,
+  'red-100': $red-color-scale-100,
+  'red-500': $red-color-scale-500,
+  'green-100': $green-color-scale-100,
+  'green-500': $green-color-scale-500,
+  'blue-100': $blue-color-scale-100,
+  'blue-500': $blue-color-scale-500,
+);
+
+// Mixin to generate background and text color classes
+@mixin generate-color-classes($color-map) {
+  @each $name, $color in $color-map {
+    .bg-#{$name} {
+      background-color: $color !important;
+    }
+    .text-#{$name} {
+      color: $color !important;
+    }
+    .stroke-color-#{$name} {
+      stroke: $color !important;
+    }
+  }
+}
+
+// Apply the mixin
+@include generate-color-classes($colors);
