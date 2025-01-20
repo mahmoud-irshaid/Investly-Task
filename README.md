@@ -23,7 +23,7 @@ git clone https://github.com/mahmoud-irshaid/Investly-Task.git
 Then navigate to the project directory and install the required packages:
 
 ```bash
-cd Task && npm install
+ cd Investly-Task && npm install
 ```
 
 ```bash
